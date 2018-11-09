@@ -126,6 +126,8 @@ tags:
     x-displayName: Order Delivery Webhooks
   - name: delivery-pools-api
     x-displayName: Delivery Pools API
+  - name: webhook-callback
+    x-displayName: Callback
 x-tagGroups:
   - name: Delivery Pools
     tags:
@@ -145,3 +147,6 @@ x-tagGroups:
     tags:
       - restaurant-api
       - restaurant-webhooks
+  - name: Webhook
+    tags:
+      - webhook-callback

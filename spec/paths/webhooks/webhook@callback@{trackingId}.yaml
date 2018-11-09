@@ -1,0 +1,36 @@
+post:
+  tags:
+  - webhook-callback
+  summary: Acknowledge asynchronous webhook
+  description: After you have recieved an asynchronous webhook message, this endpoint can be called to notify either the success of failure
+  parameters:
+    - name: trackingId
+      in: path
+      required: true
+      schema:
+        type: string
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            status:
+              required: true
+              type: string
+              format: enum
+              enum: [success, failure]
+            message:
+              type: string
+              description: A text description of the reason for success or failure
+            data:
+              type: object
+              description: data relevant to the webhook being replied to
+responses:
+    '200':
+      description: Request successfully received
+    '404':
+      description: Provided tracking ID can not be resolved
+    '409':
+      description: Callback already has a response
