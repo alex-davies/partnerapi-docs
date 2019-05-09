@@ -11,7 +11,7 @@ properties:
   Id: 
     type: string
     deprecated: true
-    description: The unique identifer for an order within the country. YOu can provide this ID whenever sending requests related to the order. Note that further messages from Just Eat relating to this order may not use this same identifier, use OrderId for a more consistant identifier.
+    description: The unique identifier for an order within the country. You can provide this ID whenever sending requests related to the order. Note that further messages from Just Eat relating to this order may not use this same identifier, use OrderId for a more consistent identifier.
     example: 348322088
   CustomerOrderId: 
     format: int32
